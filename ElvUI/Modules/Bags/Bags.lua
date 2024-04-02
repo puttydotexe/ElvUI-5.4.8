@@ -1468,7 +1468,7 @@ end
 function B:ToggleBackpack()
 	if IsOptionFrameOpen() then return end
 
-	if not B.BagFrame:IsShown() then
+	if IsBagOpen(0) then
 		B:OpenBags()
 		PlaySound("igBackPackOpen")
 	else
